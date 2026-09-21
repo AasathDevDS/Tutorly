@@ -9,11 +9,6 @@ class TeacherSerializer(serializers.ModelSerializer):
 
     def _validate_sri_lankan_phone(self, value, field_name):
         if value is not None and value != "":
-            # Integer-ah vandhaalum string-ah convert pannidum
-            value_str = str(value).strip()
-            if len(value_str) == 9 and value_str.startswith('7'):
-                value_str = '0' + value_str
-
             if not value_str.isdigit():
                 raise serializers.ValidationError(f"{field_name} must contain only digits.")
             if len(value_str) != 10:
