@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'subject',
     'teacher',
     'student',
-    'class'
+    'batch',
+    'enrollment'
 ]
 
 MIDDLEWARE = [

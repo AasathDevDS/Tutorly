@@ -30,4 +30,4 @@ class ClassBatch(models.Model):
         verbose_name_plural = "Classes / Batches"
 
     def __str__(self):
-        return f"{self.name} - {self.grade}"
+        return f"{self.subject} - {self.grade}"
